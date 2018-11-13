@@ -39,9 +39,9 @@ var forceXRace = d3
 var forceYClosed = d3
   .forceY(d => {
     if (d.closed === 'yes') {
-      return height/1.1
+      return height / 1.1
     } else {
-      return height/2
+      return height / 2
     }
   })
 
@@ -63,8 +63,7 @@ const colorScale = d3
     '#58508d'
   ])
 
-
-  d3.csv(require('./data/phillymurderrate.csv'))
+d3.csv(require('./data/phillymurderrate.csv'))
   .then(ready)
   .catch(err => console.log('Failed on', err))
 
@@ -91,11 +90,11 @@ function ready (datapoints) {
         return colorScale(d.race)
       })
 
-    simulation 
+    simulation
       .force('x', forceXCombine)
       .alphaTarget(0.5)
       .restart()
-    })
+  })
 
   d3.select('#pop-race').on('stepin', () => {
     console.log('pop-race stepin')
@@ -114,18 +113,16 @@ function ready (datapoints) {
       .restart()
   })
 
-
   simulation.nodes(datapoints)
     .on('tick', ticked)
 
   function ticked () {
     circles
-      .attr('cx', function(d) {
+      .attr('cx', function (d) {
         return d.x
       })
-      .attr('cy', function(d) {
+      .attr('cy', function (d) {
         return d.y
       })
   }
-
 }

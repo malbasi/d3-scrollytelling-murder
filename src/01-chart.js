@@ -62,25 +62,25 @@ function ready ([json, allData]) {
     .attr('stroke', 'black')
     .attr('fill', 'none')
 
-  d3.select('#murders-2012').on('stepin', () => {
-    svg
-      .selectAll('.year1')
-      .data(nested)
-      .enter()
-      .append('circle')
-      .attr('class', 'year1')
-      .attr('r', 10)
-      .attr('cx', 1)
-      .attr('cy', 1)
-      .attr('transform', d => {
-        // console.log(d.values)
-        if (d.key === '2012') {
-         console.log(d.values)
-          // let coords = projection([d.lon, d.lat])
-          // return `translate(${coords})`
-        }
-      })
-  })
+  // d3.select('#murders-2012').on('stepin', () => {
+  //   svg
+  //     .selectAll('.year1')
+  //     .data(nested)
+  //     .enter()
+  //     .append('circle')
+  //     .attr('class', 'year1')
+  //     .attr('r', 10)
+  //     .attr('cx', 1)
+  //     .attr('cy', 1)
+  //     .attr('transform', d => {
+  //       // console.log(d.values)
+  //       if (d.key === '2012') {
+  //        console.log(d.values)
+  //         // let coords = projection([d.lon, d.lat])
+  //         // return `translate(${coords})`
+  //       }
+  //     })
+  // })
   // d3.select('#2012-murders').on('stepin', () => {
   // svg
   //   .selectAll('.')
