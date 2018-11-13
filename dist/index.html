@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <style>
+          .container {
+            /*max-width: 60rem;*/
+          }
+
+          .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+          }
+
+          h1 {
+            text-align: center;
+          }
+
+          #chart-1 .axis line {
+            stroke: #999;
+            stroke-width: 0.5;
+            stroke-dasharray: 3 2;
+          }
+
+          p small {
+            background: #fff880;
+          }
+
+          .colored-text {
+            padding: 1px 7px;
+            display: inline-block;
+          }
+          
+          .dark-theme {
+              background-color: #808080;
+              color: #fcfbfb;   
+          }
+        </style>
+        <style>
+          /* Highlight steps when you scroll into them */
+          /* You can delete this one! */
+          /*.step.entered {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: 1.5s background;
+            -moz-transition: 1.5s background;
+            transition: 1.5s background;
+            background: #fff888;
+          }*/
+
+          /* Set the sticky things 2% from the top */
+          .sticky {
+            top: 1vh;
+            align-self: flex-start;  
+          }
+
+
+          /* Minimum height of 70% of the screen */
+          .step {
+            min-height: 75vh;
+          }
+
+          .step > p {
+
+            padding: 10px 0;
+            margin-bottom: 0;
+            padding-bottom: 1rem;
+          }
+
+          .step > h2, .step > h3 {
+            background: rgba(255,255,255,0.9);
+          }
+        </style>
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mt-5 mb-5">
+          <h1>Murders, Justice and Race in Philadelphia</h1>
+        </div>
+      </div>
+
+      <div class="row mt-5 mb-5">
+        <div class="col-sm-12">
+            <h1>Geographic Distritbution</h1>
+        </div>
+        <div class="col-lg-8 sticky">
+          <div id="chart-1"></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="step" id="top">
+          <p>Here is a map of Philadelphia County divided by neighborhood</p>
+        </div>
+          <div class="step" id="murders-2012">
+            <p>Here is every murder in Philadelphia in 2012</p>
+          </div>
+          <div class="step" id="murders-2013">
+            <p>Here is every murder in Philadelphia in 2013</p>
+          </div>
+          <div class="step" id="murders-2014">
+            <p>Here is every murder in Philadelphia in 2014</p>
+          </div>
+          <div class="step" id="murders-2015">
+            <p>Here is every murder in Philadelphia in 2015</p>
+          </div>
+          <div class="step" id="murders-2016">
+            <p>Here is every murder in Philadelphia in 2016</p>
+          </div>
+         <div class="step" id="all-murders"><p>In a five year period beginning in 2012, there were 1,384 murders in Philadelphia</p></div>
+         <div class="step" id="race"><p>
+          The race of the murder victims were
+          <ul>
+           <li>Black 1,067</li>
+           <li>Hispanic 195</li>
+           <li>White 103</li>
+           <li>Asian 19</li>
+         </ul></p></div>
+         <div class="step" id="only-arrest"><p>Now, remove the dots where the murders were closed with an arrest</p></div>
+        </div>
+      </div>
+
+      <div class="row mt-5 mb-5">
+        <div class="col-sm-12">
+            <h1>Closure distribution</h1>
+        </div>
+        <div class="col-lg-8 sticky">
+          <div id="chart-2"></div>
+        </div>
+        <div class="col-lg-4">
+          <p>This is the average number of murders over the 5 year period</p>
+          <div class="step" id="all-pop"><p>Each dot represents 1 murder</p></div>
+          <div class="step" id="pop-race"><p>
+            If we divide them up by race...
+          </p>
+          </div>
+          <div class="step" id="murder-rate"><p>If we push the solved cases to the bottom</p>
+          </div>
+    </div>
+
+    <script src="/01-chart.1405eaad.js"></script>
+    <script src="/02-chart.e0b79113.js"></script>
+    <script src="/scrollytelling.eca47975.js"></script>
+
+   </div></div></body>
+</html>
